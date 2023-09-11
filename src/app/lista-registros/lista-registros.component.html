@@ -1,0 +1,36 @@
+<h2>Lista de Registros</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Area</th>
+       <th><b>Herramienta</b></th>
+        <th>Tipo</th>
+        <th>Cantidad</th>
+        <th>Fecha de Retiro</th>
+        <th></th>
+
+    </tr>
+
+</thead>
+<tbody >
+    <tr *ngFor="let registro of registros">
+    <td>{{registro.nombre}}</td>
+    <td>{{registro.apellido}}</td>
+    <td>{{registro.area}}</td>
+    <td>{{registro.nombreHerramienta}}</td>
+    <td>{{registro.tipo}}</td>
+    <td>{{registro.cantidad}}</td>
+    <td>{{registro.fechaSalida}}</td>
+
+    <td>
+    <!-- <button (click)= "actualizarRegistro (empleado.id)" class="btn btn-info">Editar</button> -->
+    <button (click)= "eliminarRegistro (registro.id)" class="btn btn-danger" style="margin-left: 10px; ">Eliminar</button>
+    <!-- <button (click)= "verDetallesDelEmpleado(empleado.id)" class="btn btn-primary" style="margin-left: 10px; ">Detalles</button> -->
+    
+    </td>
+    </tr>
+
+</tbody>
+</table>
