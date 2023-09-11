@@ -7,7 +7,8 @@
             <label> Nombre : </label>
         <!-- <input type="text" class="form-control" id="nombreRegistro" [(ngModel)]= "registro.nombre" name='nombre' required 
         minlength ="3" maxlength="60" placeholder="Ingrese el nombre" #nombreRegistro="ngModel"> -->
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <!-- en el parametro $event va toda la informacion actualizada -->
+                <select (change)="actualizarNombre($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option selected> Seleccione el Nombre</option>
                         <option *ngFor="let empleado of empleados" [value]="empleado.nombre">{{empleado.nombre}}</option>
                       </select>
@@ -15,7 +16,7 @@
         
          <div class="form-group">
                 <label> Apellido : </label>
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select (change)=" actualizarApellido($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option selected> Seleccione el Apellido</option>
                         <option *ngFor="let empleado of empleados" [value]="empleado.apellido">{{empleado.apellido}}</option>
                     </select>
@@ -23,7 +24,7 @@
             
         <div class="form-group">
             <label> Area : </label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <select (change)=" actualizarArea($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected> Seleccione el Area</option>
                     <option *ngFor="let empleado of empleados" [value]="empleado.area">{{empleado.area}}</option>
                 </select>
@@ -31,11 +32,20 @@
 
         <div class="form-group">
             <label> Herramienta : </label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <select (change)="actualizarNombreHerramienta($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected> Seleccione la Herramienta</option>
                     <option *ngFor="let herramienta of herramientas" [value]="herramienta.nombreHerramienta">{{herramienta.nombreHerramienta}}</option>
                 </select>
+        </div>    
+        
+        <div class="form-group">
+            <label> Tipo : </label>
+                <select (change)="actualizarTipo($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected> Seleccione tipo de herremienta </option>
+                    <option *ngFor="let herramienta of herramientas" [value]="herramienta.tipo">{{herramienta.tipo}}</option>
+                </select>
         </div>         
+
 
                 
                    

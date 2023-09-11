@@ -27,6 +27,7 @@ export class ListaRegistrosComponent {
     this.obtenerEmpleados ();
     this.obtenerHerramienta();
     this.obtenerRegistro();
+    
 }
   // actualizarEmpleado(id:number){
   //   this.router.navigate(['actualizar-empleado',id]);

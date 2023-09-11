@@ -29,6 +29,21 @@ export class AgregarRegistroComponent implements OnInit{
     this.obtenerHerramienta();
 
   }
+  actualizarNombre(e){
+    this.registro.nombre= e.target.value;
+  }
+  actualizarApellido(e){
+    this.registro.apellido= e.target.value;
+  }
+  actualizarArea(e){
+    this.registro.area= e.target.value;
+  }
+  actualizarNombreHerramienta(e){
+    this.registro.nombreHerramienta= e.target.value;
+  }
+  actualizarTipo(e){
+    this.registro.tipo= e.target.value;
+  }
 
   guardarRegistro() {
     this.registroService.registrarRegistros(this.registro).pipe(

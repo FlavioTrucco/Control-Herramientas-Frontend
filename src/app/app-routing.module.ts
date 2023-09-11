@@ -7,12 +7,14 @@ import { EmpleadoDetallesComponent } from './empleado-detalles/empleado-detalles
 import { ListaHerramientasComponent } from './lista-herramientas/lista-herramientas.component';
 import { ListaRegistrosComponent } from './lista-registros/lista-registros.component';
 import { AgregarRegistroComponent } from './agregar-registro/agregar-registro.component';
+import { ActualizarHerramientaComponent } from './actualizar-herramienta/actualizar-herramienta.component';
 
 const routes: Routes = [
   {path:'empleados', component: ListaEmpleadosComponent},
   {path:'',redirectTo: 'empleados',pathMatch:'full'},
   {path:'registrar-empleado', component: RegistrarEmpleadoComponent},
   {path:'actualizar-empleado/:id', component: ActualizarEmpleadoComponent},
+  {path:'actualizar-herramienta/:id', component: ActualizarHerramientaComponent},
   {path:'empleado-detalles/:id', component: EmpleadoDetallesComponent},
   {path:'lista-herramientas', component: ListaHerramientasComponent},
   {path:'lista-registros', component: ListaRegistrosComponent},

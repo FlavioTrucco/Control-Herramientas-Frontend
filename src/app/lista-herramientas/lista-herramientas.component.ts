@@ -20,7 +20,7 @@ export class ListaHerramientasComponent {
 
 }
   actualizarHerramienta(id:number){
-    this.router.navigate(['actualizar-empleado',id]);
+    this.router.navigate(['actualizar-herramienta',id]);
   }
 
   eliminarHerramienta(id:number){

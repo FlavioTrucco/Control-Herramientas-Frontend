@@ -14,6 +14,7 @@ import { ListaHerramientasComponent } from './lista-herramientas/lista-herramien
 import { EmpleadoService } from './empleado.service';
 import { ListaRegistrosComponent } from './lista-registros/lista-registros.component';
 import { AgregarRegistroComponent } from './agregar-registro/agregar-registro.component';
+import { ActualizarHerramientaComponent } from './actualizar-herramienta/actualizar-herramienta.component';
 
 
 
@@ -28,6 +29,7 @@ import { AgregarRegistroComponent } from './agregar-registro/agregar-registro.co
     ListaHerramientasComponent,
     ListaRegistrosComponent,
     AgregarRegistroComponent,
+    ActualizarHerramientaComponent,
     
   ],
   imports: [
